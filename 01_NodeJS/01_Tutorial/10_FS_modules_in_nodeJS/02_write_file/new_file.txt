@@ -1,0 +1,1 @@
+This is a new file created using fs.writeFile() in Node.js! #### Appending this text to the existing file content.
