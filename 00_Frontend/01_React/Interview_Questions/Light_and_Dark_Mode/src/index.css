@@ -1,0 +1,37 @@
+/* CSS variables scoped to the "light" theme, applied when
+   <html data-theme="light"> is set by ThemeContext's useEffect */
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+}
+
+/* Same idea for dark mode — swaps the variable values, not the rules that use them */
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+.themeSwitcher {
+  height: 100dvh; /* full viewport height, accounts for mobile browser chrome */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.themeBtn {
+  height: 45px;
+  padding: 8px 24px;
+  border-radius: 16px;
+  /* Button colors are inverted relative to the page —
+     it uses text-color as its background so it stays visible in both themes */
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
